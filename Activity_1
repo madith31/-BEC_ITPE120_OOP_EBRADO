@@ -1,0 +1,34 @@
+//Static Variables
+class MyClass {
+       static int instanceCount = 0;
+    
+    MyClass() {
+              instanceCount++;
+    }
+    
+
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        MyClass obj3 = new MyClass();
+        
+   System.out.println("Number of instances: " + MyClass.instanceCount);
+    }
+}
+//Static Methods
+class MathUtils {
+    static double calculateAverage(double[] numbers) {
+        double sum = 0;
+        for (double num : numbers) {
+            sum += num;
+        }
+        return sum / numbers.length;
+    }
+    
+    public static void main(String[] args) {
+          double[] numbers = { 5.5, 6.0, 7.2, 8.1, 9.3 };
+          double average = MathUtils.calculateAverage(numbers);
+        
+          System.out.println("Average: " + average);
+    }
+}
